@@ -10,12 +10,12 @@
   BCOR=10mm,
   english,
   ngerman]{book}
-\usepackage[english, ngerman]{babel} % If you write mainly in english change order to ngerman, english
+\usepackage[ngerman, english]{babel} % If you write mainly in english change order to ngerman, english
 % Include of titling must happen before \title etc.
 % that's why it's not in setup.tex
 \usepackage{titling}
-\title{Your title goes here}
-\author{Your Name}
+\title{A GDPR Compliant Decentralized Healthcare Data Sharing System Based on Blockchain}
+\author{Siyu Chen}
 
 % include all packages and define commands in setup.tex
 \input{setup}
@@ -28,7 +28,7 @@
 
     % enable/disable, depending on your chosen language
     \input{chapters/0_0-titlepage_en}
-    \input{chapters/0_0-titlepage_de}
+    % \input{chapters/0_0-titlepage_de}
 
     \pagestyle{plain} % remove chapter name from top, page number at the bottom
     % use \pagestyle{headings} for having the chapter on top of the pages
@@ -48,14 +48,17 @@
     \mainmatter  % Arabic page numbers
     \input{chapters/1-introduction}
     \input{chapters/3-background}
-    \input{chapters/4-approach}
-    \input{chapters/5-experiments}
-    \input{chapters/55-related}
-    \input{chapters/6-conclusions}
+    \input{chapters/4-requirement}
+    \input{chapters/5-design}
+    \input{chapters/6-implementation}
+    \input{chapters/7-evaluation}
+    \input{chapters/8-discussion}
+    \input{chapters/9-conclusion}
+    \input{chapters/10-acknowledgments}
 
     % bibliography is not in the table of contents per default, add it manually
     % enable the \renewcommand for german header
-    % \renewcommand{\bibname}{Literaturverzeichnis}
+    \renewcommand{\bibname}{Bibliography}
     \addcontentsline{toc}{chapter}{Bibliography}
 
     \bibliographystyle{plainnat}
